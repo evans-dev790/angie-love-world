@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle, #5c0015, #160006, #050003);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #ff365b;
+    font-size: 42px;
+    text-shadow: 0 0 20px #ff1744;
+    margin-bottom: 25px;
+}
+
+p {
+    color: #ffc0cb;
+    font-size: 20px;
+    line-height: 1.8;
+}
+.container {
+    width: 90%;
+    max-width: 650px;
+    padding: 35px 20px;
+}
+
+.rose {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: bloom 2s infinite alternate;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.heart {
+    font-size: 85px;
+    margin: 20px 0;
+    animation: heartbeat 1.2s infinite;
+    filter: drop-shadow(0 0 20px red);
+}
+
+.message {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid #ff365b;
+    border-radius: 20px;
+    padding: 25px;
+    line-height: 1.9;
+    box-shadow: 0 0 25px rgba(255,0,50,0.2);
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #a00020, #ff1744);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    margin-top: 25px;
+    padding: 25px;
+    background: rgba(255,0,50,0.12);
+    border: 1px solid #ff365b;
+    border-radius: 20px;
+    line-height: 1.8;
+}
+
+#surprise h2 {
+    color: #ff6680;
+    margin-bottom: 15px;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes bloom {
+    from { transform: scale(0.9); }
+    to { transform: scale(1.05); }
+}
+
+@media (max-width: 500px) {
+    h1 { font-size: 32px; }
+    .message { font-size: 16px; }
+}
